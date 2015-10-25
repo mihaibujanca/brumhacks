@@ -39,7 +39,7 @@ concatenated = ''.join(tag for tag in tagsArray if tag not in exclude)
 concatenated = ''.join(ch for ch in concatenated if ch not in exclude)
 #you now have the thinggy 
 
-code = "01234567"
+code = "0123456"
 code = "".join(random.sample(code, len(code)))
 
 encryptedKey = bitshuffle.encrypt(code ,concatenated)

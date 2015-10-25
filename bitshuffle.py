@@ -14,10 +14,9 @@ def encrypt(code, data):
         dec = ord(c)
         ndec = 0
 
-        for i in xrange(8):
+        for i in xrange(7):
             bit = dec >> i & 1
             ndec = ndec | bit << int(code[i])
-
         args.append(chr(ndec))
 
     return struct.pack(*args)
@@ -37,7 +36,7 @@ def decrypt(code, data):
         dec = ord(c)
         ndec = 0
 
-        for i in xrange(8):
+        for i in xrange(7):
             bit = dec >> i & 1
             ndec = ndec | bit << code.find(str(i))
 
